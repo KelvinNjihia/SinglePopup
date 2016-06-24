@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>First Visit Popup</title>
+		<link rel="stylesheet" href="style.css">
+		</head>
+
+		<body>
+            <!--Put your custom content in here-->
+<div id="container">
+          <h1>Hello on my page,</h1>
+          
+          <p>On this page you only see pop up only once till cookie expires!
+            </p>
+          
+        </div>
+<div id="my-welcome-message">
+          <h2>Welcome to my site</h2>
+          <p>Hello, welcome to my website.</p>
+        </div>
+            
+            <!---till here-->
+            
+            <!--place this JS just above body of your content-->
+<script src="jquery.min.js"></script> 
+<script src="singlePop.up.js"></script> 
+<script>
+    //cookie set function
+			$(function () {
+				$('#my-welcome-message').singlePopUp({
+					cookieName : 'homepage',
+					showAgainSelector: '#show-message'
+				});
+			});
+		</script>
+    
+    <script type="text/javascript">
+//checkes the server
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
